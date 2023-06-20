@@ -12,7 +12,7 @@
 
 
 #include <iostream>
-#define MODE 1; //"Работаю в боевом режиме"
+#define MODE 2 //"Работаю в боевом режиме"
 using namespace std;
 
 class Calc
@@ -57,7 +57,7 @@ int main()
 #elif MODE == 0
     cout << "Работаю в режиме тренировки" << endl;
 #else MODE
-    cout << "Неизвестный режим. Завершение работы" << endl;
+#error Неизвестный режим. Нужно определить MODE. Завершение работы
 #endif
     return 0;
 }
